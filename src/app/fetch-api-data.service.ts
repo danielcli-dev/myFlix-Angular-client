@@ -9,7 +9,7 @@ import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 //Declaring the api url that will provide data for the client app
-const apiUrl = 'YOUR_HOSTED_API_URL_HERE/';
+const apiUrl = 'https://cfdb-movie-api-59ec69f25db6.herokuapp.com/';
 @Injectable({
   providedIn: 'root',
 })
