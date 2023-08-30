@@ -1,13 +1,6 @@
-// src/app/user-registration-form/user-registration-form.component.ts
 import { Component, OnInit, Input } from '@angular/core';
-
-// You'll use this import to close the dialog on success
 import { MatDialogRef } from '@angular/material/dialog';
-
-// This import brings in the API calls we created in 6.2
 import { FetchApiDataService } from '../fetch-api-data.service';
-
-// This import is used to display notifications back to the user
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -24,6 +17,7 @@ export class UserRegistrationFormComponent implements OnInit {
     public snackBar: MatSnackBar
   ) {}
 
+  // void is the opposite of any type. means it is typeless. use for functions that do not return a value
   ngOnInit(): void {}
 
   // This is the function responsible for sending the form inputs to the backend
