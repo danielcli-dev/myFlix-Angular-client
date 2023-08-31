@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-// import { catchError } from 'rxjs/internal/operators';
 import {
   HttpClient,
   HttpHeaders,
@@ -101,21 +100,33 @@ export class FetchApiDataService {
       );
   }
 
-  addFavoriteMovie(name: string, title: string): Observable<any> {
+  addFavoriteMovie(name: string, id: string): Observable<any> {
     const token = localStorage.getItem('token');
     return this.http
-      .post(apiUrl + 'users/' + name + '/add/' + title, {
+      .get(apiUrl + 'users/' + name, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
       })
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
+  // addFavoriteMovie(name: string, id: string): Observable<any> {
+  //   const token = localStorage.getItem('token');
+  //   console.log('hi');
 
-  deleteFavoriteMovie(name: string, title: string): Observable<any> {
+  //   return this.http
+  //     .post(apiUrl + 'users/' + name + '/add/' + id, {
+  //       headers: new HttpHeaders({
+  //         Authorization: 'Bearer ' + token,
+  //       }),
+  //     })
+  //     .pipe(map(this.extractResponseData), catchError(this.handleError));
+  // }
+
+  deleteFavoriteMovie(name: string, id: string): Observable<any> {
     const token = localStorage.getItem('token');
     return this.http
-      .delete(apiUrl + 'users/' + name + '/remove/' + title, {
+      .delete(apiUrl + 'users/' + name + '/remove/' + id, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),

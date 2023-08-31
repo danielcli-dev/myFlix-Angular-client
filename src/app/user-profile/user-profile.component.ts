@@ -48,7 +48,7 @@ export class UserProfileComponent {
       this.userData.Email = this.user.Email;
       this.userData.Birthday = this.user.Birthday.slice(0, 10);
       this.favorites = this.user.FavoriteMovies;
-      console.log(this.favorites);
+      console.log('favs', this.favorites);
     });
   }
   editUser(): void {

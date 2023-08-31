@@ -35,7 +35,12 @@
       >
         Synopsis
       </button>
-      <mat-icon>favorite_border</mat-icon>
+      <button
+        mat-button
+        (click)="addMovieFavorite(this.localUsername, this.movie._id)"
+      >
+        <mat-icon>favorite_border</mat-icon>
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>

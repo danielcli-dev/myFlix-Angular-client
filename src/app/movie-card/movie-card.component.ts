@@ -9,7 +9,10 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./movie-card.component.scss'],
 })
 export class MovieCardComponent {
+  localUser: any = {};
+  localUsername: string = '';
   movies: any[] = [];
+  favorited: boolean = false;
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
@@ -17,12 +20,18 @@ export class MovieCardComponent {
   ) {}
 
   ngOnInit(): void {
+    this.getUserName();
     this.getMovies();
+  }
+  getUserName(): void {
+    this.localUser = localStorage.getItem('user');
+    this.localUsername = JSON.parse(this.localUser).Username;
+    // this.favorites = JSON.parse(this.localUser).FavoriteMovies;
   }
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
-      console.log(this.movies);
+      console.log('movies are', this.movies);
       return this.movies;
     });
   }
@@ -52,5 +61,18 @@ export class MovieCardComponent {
         text: details,
       },
     });
+  }
+  addMovieFavorite(username: string, id: any): void {
+    // if (!this.favorited) {
+    this.fetchApiData
+      .addFavoriteMovie(username, '64309db721a224b46238c9b0')
+      .subscribe((resp: any) => {
+        return resp;
+      });
+    // } else if (this.favorited) {
+    //   this.fetchApiData
+    //     .deleteFavoriteMovie(username, id)
+    // .subscribe((resp: any) => {});
+    // }
   }
 }
