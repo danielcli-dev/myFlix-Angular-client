@@ -100,16 +100,16 @@ export class FetchApiDataService {
       );
   }
 
-  // addFavoriteMovie(name: string, id: string): Observable<any> {
-  //   const token = localStorage.getItem('token');
-  //   return this.http
-  //     .get(apiUrl + 'users/' + name, {
-  //       headers: new HttpHeaders({
-  //         Authorization: 'Bearer ' + token,
-  //       }),
-  //     })
-  //     .pipe(map(this.extractResponseData), catchError(this.handleError));
-  // }
+  addFavoriteMovie(name: string, id: string): Observable<any> {
+    const token = localStorage.getItem('token');
+    return this.http
+      .get(apiUrl + 'users/' + name, {
+        headers: new HttpHeaders({
+          Authorization: 'Bearer ' + token,
+        }),
+      })
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
+  }
 
 
 
