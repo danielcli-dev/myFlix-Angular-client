@@ -69,6 +69,9 @@ export class MovieCardComponent {
       .subscribe((resp: any) => {
         return resp;
       });
+
+
+      
     // } else if (this.favorited) {
     //   this.fetchApiData
     //     .deleteFavoriteMovie(username, id)
