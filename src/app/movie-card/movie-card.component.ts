@@ -62,20 +62,4 @@ export class MovieCardComponent {
       },
     });
   }
-  addMovieFavorite(username: string, id: any): void {
-    // if (!this.favorited) {
-    this.fetchApiData
-      .addFavoriteMovie(username, '64309db721a224b46238c9b0')
-      .subscribe((resp: any) => {
-        return resp;
-      });
-
-
-      
-    // } else if (this.favorited) {
-    //   this.fetchApiData
-    //     .deleteFavoriteMovie(username, id)
-    // .subscribe((resp: any) => {});
-    // }
-  }
 }
