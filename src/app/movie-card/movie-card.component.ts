@@ -12,6 +12,7 @@ export class MovieCardComponent {
   localUser: any = {};
   localUsername: string = '';
   movies: any[] = [];
+  favorite: any = {};
   favorited: boolean = false;
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -65,9 +66,9 @@ export class MovieCardComponent {
   addMovieFavorite(name: string, id: any): void {
     console.log('tried adding favorite');
     this.fetchApiData.addFavoriteMovie(name, id).subscribe((resp: any) => {
-      // this.movies = resp;
-      // console.log('movies are', this.movies);
-      // return this.movies;
+      this.favorite = resp;
+      console.log('Added this', this.favorite);
+      return this.favorite;
     });
   }
 }
