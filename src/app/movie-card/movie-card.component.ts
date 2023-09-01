@@ -63,12 +63,23 @@ export class MovieCardComponent {
       },
     });
   }
-  toMovieFavorite(name: string, id: any): void {
-    console.log('tried adding favorite');
-    this.fetchApiData.addFavoriteMovie(name, id).subscribe((resp: any) => {
-      this.favorite = resp;
-      console.log('Added this', this.favorite);
-      return this.favorite;
-    });
+  toggleMovieFavorite(name: string, id: any): void {
+    if (!this.favorited) {
+      console.log('tried adding favorite');
+      this.fetchApiData.addFavoriteMovie(name, id).subscribe((resp: any) => {
+        this.favorite = resp;
+        console.log('Added this', this.favorite);
+        this.favorited = true;
+        return this.favorite;
+      });
+    } else {
+      console.log('tried adding favorite');
+      this.fetchApiData.deleteFavoriteMovie(name, id).subscribe((resp: any) => {
+        this.favorite = resp;
+        console.log('Deleted this', this.favorite);
+        this.favorited = false;
+        return this.favorite;
+      });
+    }
   }
 }
