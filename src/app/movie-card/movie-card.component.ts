@@ -73,7 +73,7 @@ export class MovieCardComponent {
         return this.favorite;
       });
     } else {
-      console.log('tried adding favorite');
+      console.log('tried deleting favorite');
       this.fetchApiData.deleteFavoriteMovie(name, id).subscribe((resp: any) => {
         this.favorite = resp;
         console.log('Deleted this', this.favorite);
