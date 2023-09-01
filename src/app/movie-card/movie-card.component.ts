@@ -13,7 +13,11 @@ export class MovieCardComponent {
   localUsername: string = '';
   movies: any[] = [];
   favorite: any = {};
-  favorited: boolean = false;
+  favorites: any = [];
+  favorited: boolean = true;
+  buttonStyle: any = {
+
+  }
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
@@ -23,7 +27,9 @@ export class MovieCardComponent {
   ngOnInit(): void {
     this.getUserName();
     this.getMovies();
+    this.getFavorites();
   }
+
   getUserName(): void {
     this.localUser = localStorage.getItem('user');
     this.localUsername = JSON.parse(this.localUser).Username;
@@ -36,6 +42,17 @@ export class MovieCardComponent {
       return this.movies;
     });
   }
+
+  getFavorites(): void {
+    this.fetchApiData
+      .getFavoriteMovies(this.localUsername)
+      .subscribe((resp: any) => {
+        this.favorites = resp;
+        console.log('My favorites are', this.favorites);
+        return this.favorites;
+      });
+  }
+
   goToProfile(): void {
     this.router.navigate(['profile']);
   }
@@ -64,20 +81,20 @@ export class MovieCardComponent {
     });
   }
   toggleMovieFavorite(name: string, id: any): void {
-    if (!this.favorited) {
+    if (!this.favorites.includes(id)) {
       console.log('tried adding favorite');
       this.fetchApiData.addFavoriteMovie(name, id).subscribe((resp: any) => {
         this.favorite = resp;
         console.log('Added this', this.favorite);
-        this.favorited = true;
+        this.getFavorites();
         return this.favorite;
       });
-    } else {
+    } else if (this.favorites.includes(id)) {
       console.log('tried deleting favorite');
       this.fetchApiData.deleteFavoriteMovie(name, id).subscribe((resp: any) => {
         this.favorite = resp;
         console.log('Deleted this', this.favorite);
-        this.favorited = false;
+        this.getFavorites();
         return this.favorite;
       });
     }
