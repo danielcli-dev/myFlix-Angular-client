@@ -103,26 +103,13 @@ export class FetchApiDataService {
   addFavoriteMovie(name: string, id: string): Observable<any> {
     const token = localStorage.getItem('token');
     return this.http
-      .get(apiUrl + 'users/' + name + '/add/' + id, {
+      .post(apiUrl + 'users/' + name + '/add/' + id, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
       })
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
-
-  // addFavoriteMovie(name: string, id: string): Observable<any> {
-  //   const token = localStorage.getItem('token');
-  //   console.log('hi');
-
-  //   return this.http
-  //     .post(apiUrl + 'users/' + name + '/add/' + id, {
-  //       headers: new HttpHeaders({
-  //         Authorization: 'Bearer ' + token,
-  //       }),
-  //     })
-  //     .pipe(map(this.extractResponseData), catchError(this.handleError));
-  // }
 
   deleteFavoriteMovie(name: string, id: string): Observable<any> {
     const token = localStorage.getItem('token');
