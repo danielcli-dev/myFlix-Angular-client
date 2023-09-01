@@ -63,6 +63,7 @@ export class MovieCardComponent {
     });
   }
   addMovieFavorite(name: string, id: any): void {
+    console.log('tried adding favorite');
     this.fetchApiData.addFavoriteMovie(name, id).subscribe((resp: any) => {
       // this.movies = resp;
       // console.log('movies are', this.movies);
