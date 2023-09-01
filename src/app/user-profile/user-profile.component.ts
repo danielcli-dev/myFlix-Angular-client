@@ -81,12 +81,20 @@ export class UserProfileComponent implements OnInit {
     }
   }
   deleteUser(): void {
-    this.fetchApiData.deleteUser(this.localUsername).subscribe((resp: any) => {
-      this.snackBar.open(resp, 'OK', {
-        duration: 2000,
-      });
-      this.router.navigate(['/']);
-    });
+    if (
+      confirm(
+        `Are you sure you want to delete your account?`
+      )
+    ) {
+      this.fetchApiData
+        .deleteUser(this.localUsername)
+        .subscribe((resp: any) => {
+          this.snackBar.open(resp, 'OK', {
+            duration: 2000,
+          });
+          this.router.navigate(['/']);
+        });
+    }
   }
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {

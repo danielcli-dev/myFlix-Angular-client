@@ -1,8 +1,24 @@
-<div>
-  <mat-card-header>
-    <mat-card-title>Profile</mat-card-title>
+<div style="padding: 20px; display: flex; flex-direction: column; width: 100%">
+  <mat-card-header
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      width: fit-content;
+      padding: 10px;
+    "
+  >
+    <mat-card-title style="margin-right: 20px; font-size: 20px"
+      >Profile</mat-card-title
+    >
     <mat-card-actions>
-      <button mat-raised-button (click)="goBack()" color="primary">
+      <button
+        mat-raised-button
+        (click)="goBack()"
+        color="primary"
+        style="padding: 10px; width: fit-content"
+      >
         Back to Movies
       </button>
     </mat-card-actions>
@@ -59,8 +75,13 @@
       </mat-form-field>
     </form>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button (click)="editUser()" color="primary">
+  <mat-card-actions style="display: flex">
+    <button
+      mat-raised-button
+      (click)="editUser()"
+      color="primary"
+      style="margin-right: 15px"
+    >
       Update
     </button>
     <button mat-raised-button (click)="deleteUser()" color="warn">
@@ -69,52 +90,71 @@
   </mat-card-actions>
 </div>
 
-<div style="display: flex">
-  <p *ngIf="this.favorites.length == 0">You have no favorite movies.</p>
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  "
+>
+  <mat-card-header style="display: flex; height: fit-content; width: 100%">
+    <mat-card-title style="font-size: 20px; text-align: left"
+      >Favorite Movies</mat-card-title
+    >
+  </mat-card-header>
+  <div style="display: flex; flex-wrap: wrap; justify-content: start">
+    <p *ngIf="this.favorites.length == 0">You have no favorite movies.</p>
 
-  <mat-card *ngFor="let favorite of favoriteMovies" style="flex: 1 1 auto">
-    <mat-card-header>
-      <mat-card-title>{{ favorite.Title }}</mat-card-title>
-      <mat-card-subtitle
-        >Directed by: {{ favorite.Director.Name }}</mat-card-subtitle
-      >
-    </mat-card-header>
-    <img src="{{ favorite.ImagePath }}" alt="{{ favorite.Title }}" />
-    <mat-card-actions>
-      <button
-        mat-button
-        color="primary"
-        (click)="getMovieGenre(favorite.Genre.Name, favorite.Genre.Description)"
-      >
-        Genre
-      </button>
-      <button
-        mat-button
-        color="primary"
-        (click)="
-          getMovieDirector(favorite.Director.Name, favorite.Director.Bio)
-        "
-      >
-        Director
-      </button>
-      <button
-        mat-button
-        color="primary"
-        (click)="getMovieSynopsis(favorite.Description)"
-      >
-        Synopsis
-      </button>
-      <button
-        class="button"
-        (click)="toggleMovieFavorite(this.localUsername, favorite._id)"
-      >
-        <mat-icon
-          [ngStyle]="{
-            color: this.favorites.includes(favorite._id) ? 'pink' : null
-          }"
-          >favorite_border</mat-icon
+    <mat-card *ngFor="let favorite of favoriteMovies" style="width: 300px">
+      <mat-card-header>
+        <mat-card-title>{{ favorite.Title }}</mat-card-title>
+        <mat-card-subtitle
+          >Directed by: {{ favorite.Director.Name }}</mat-card-subtitle
         >
-      </button>
-    </mat-card-actions>
-  </mat-card>
+      </mat-card-header>
+      <img src="{{ favorite.ImagePath }}" alt="{{ favorite.Title }}" />
+      <mat-card-actions>
+        <button
+          mat-button
+          color="primary"
+          (click)="
+            getMovieGenre(favorite.Genre.Name, favorite.Genre.Description)
+          "
+        >
+          Genre
+        </button>
+        <button
+          mat-button
+          color="primary"
+          (click)="
+            getMovieDirector(favorite.Director.Name, favorite.Director.Bio)
+          "
+        >
+          Director
+        </button>
+        <button
+          mat-button
+          color="primary"
+          (click)="getMovieSynopsis(favorite.Description)"
+        >
+          Synopsis
+        </button>
+        <button
+          class="button"
+          (click)="toggleMovieFavorite(this.localUsername, favorite._id)"
+        >
+          <mat-icon
+            [ngStyle]="{
+              color: this.favorites.includes(favorite._id) ? 'pink' : null
+            }"
+            >favorite_border</mat-icon
+          >
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>

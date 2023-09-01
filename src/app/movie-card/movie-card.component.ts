@@ -15,9 +15,7 @@ export class MovieCardComponent {
   favorite: any = {};
   favorites: any = [];
   favorited: boolean = true;
-  buttonStyle: any = {
-
-  }
+  buttonStyle: any = {};
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
@@ -92,5 +90,9 @@ export class MovieCardComponent {
         return this.favorite;
       });
     }
+  }
+  logout(): void {
+    localStorage.clear();
+    this.router.navigate(['/']);
   }
 }

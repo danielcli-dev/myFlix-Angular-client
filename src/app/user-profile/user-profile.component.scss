@@ -15,8 +15,10 @@ mat-card {
 
 mat-card-header {
   display: flex;
+  // height: fit-content;
   height: 70px;
   width: fit-content;
+  // padding-bottom: 10px;
 }
 
 img {

@@ -27,6 +27,10 @@ button {
   background: none;
 }
 
+button:not(:last-child) {
+  margin-right: 10px;
+}
+
 button:hover mat-icon {
   color: lightgrey;
   cursor: pointer;
