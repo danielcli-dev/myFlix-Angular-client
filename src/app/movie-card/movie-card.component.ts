@@ -38,7 +38,6 @@ export class MovieCardComponent {
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
-      console.log('movies are', this.movies);
       return this.movies;
     });
   }
@@ -48,7 +47,6 @@ export class MovieCardComponent {
       .getFavoriteMovies(this.localUsername)
       .subscribe((resp: any) => {
         this.favorites = resp;
-        console.log('My favorites are', this.favorites);
         return this.favorites;
       });
   }
@@ -82,18 +80,14 @@ export class MovieCardComponent {
   }
   toggleMovieFavorite(name: string, id: any): void {
     if (!this.favorites.includes(id)) {
-      console.log('tried adding favorite');
       this.fetchApiData.addFavoriteMovie(name, id).subscribe((resp: any) => {
         this.favorite = resp;
-        console.log('Added this', this.favorite);
         this.getFavorites();
         return this.favorite;
       });
     } else if (this.favorites.includes(id)) {
-      console.log('tried deleting favorite');
       this.fetchApiData.deleteFavoriteMovie(name, id).subscribe((resp: any) => {
         this.favorite = resp;
-        console.log('Deleted this', this.favorite);
         this.getFavorites();
         return this.favorite;
       });

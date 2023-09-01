@@ -1,3 +1,40 @@
 mat-form-field {
   width: 300px;
 }
+img {
+  width: 250px;
+  object-fit: contain;
+}
+mat-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  margin: 10px;
+}
+
+mat-card-header {
+  display: flex;
+  height: 70px;
+  width: fit-content;
+}
+
+img {
+  width: 250px;
+  object-fit: contain;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background: none;
+}
+
+button:hover mat-icon {
+  color: lightgrey;
+  cursor: pointer;
+}

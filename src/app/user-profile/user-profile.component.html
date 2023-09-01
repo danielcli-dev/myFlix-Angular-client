@@ -1,4 +1,4 @@
-<mat-card>
+<div>
   <mat-card-header>
     <mat-card-title>Profile</mat-card-title>
     <mat-card-actions>
@@ -63,11 +63,16 @@
     <button mat-raised-button (click)="editUser()" color="primary">
       Update
     </button>
+    <button mat-raised-button (click)="deleteUser()" color="warn">
+      Delete
+    </button>
   </mat-card-actions>
-</mat-card>
-<!-- 
+</div>
+
 <div style="display: flex">
-  <mat-card *ngFor="let favorite of favorites" style="flex: 1 1 auto">
+  <p *ngIf="this.favorites.length == 0">You have no favorite movies.</p>
+
+  <mat-card *ngFor="let favorite of favoriteMovies" style="flex: 1 1 auto">
     <mat-card-header>
       <mat-card-title>{{ favorite.Title }}</mat-card-title>
       <mat-card-subtitle
@@ -76,10 +81,40 @@
     </mat-card-header>
     <img src="{{ favorite.ImagePath }}" alt="{{ favorite.Title }}" />
     <mat-card-actions>
-      <button mat-button color="primary">Genre</button>
-      <button mat-button color="primary">Director</button>
-      <button mat-button color="primary">Synopsis</button>
-      <mat-icon>favorite_border</mat-icon>
+      <button
+        mat-button
+        color="primary"
+        (click)="getMovieGenre(favorite.Genre.Name, favorite.Genre.Description)"
+      >
+        Genre
+      </button>
+      <button
+        mat-button
+        color="primary"
+        (click)="
+          getMovieDirector(favorite.Director.Name, favorite.Director.Bio)
+        "
+      >
+        Director
+      </button>
+      <button
+        mat-button
+        color="primary"
+        (click)="getMovieSynopsis(favorite.Description)"
+      >
+        Synopsis
+      </button>
+      <button
+        class="button"
+        (click)="toggleMovieFavorite(this.localUsername, favorite._id)"
+      >
+        <mat-icon
+          [ngStyle]="{
+            color: this.favorites.includes(favorite._id) ? 'pink' : null
+          }"
+          >favorite_border</mat-icon
+        >
+      </button>
     </mat-card-actions>
   </mat-card>
-</div> -->
+</div>
