@@ -20,6 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
+// Sets up all the different components, modules and routes to be accessible throughout the app
+
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },

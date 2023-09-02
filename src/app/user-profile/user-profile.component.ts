@@ -24,13 +24,14 @@ export class UserProfileComponent implements OnInit {
     private router: Router,
     public dialog: MatDialog
   ) {}
+  // Initializes variables to be assigned when input forms are filled
   @Input() userData = {
     Username: '',
     Password: '',
     Email: '',
     Birthday: '',
   };
-
+// function triggerred on component creation at beginning of lifecycle
   ngOnInit(): void {
     this.getUserName();
     this.getUser();
@@ -43,14 +44,12 @@ export class UserProfileComponent implements OnInit {
   getUserName(): void {
     this.localUser = localStorage.getItem('user');
     this.localUsername = JSON.parse(this.localUser).Username;
-    // this.favorites = JSON.parse(this.localUser).FavoriteMovies;
   }
 
   getUser(): void {
     this.fetchApiData.getUser(this.localUsername).subscribe((resp: any) => {
       this.user = resp;
       this.userData.Username = this.user.Username;
-      // this.userData.Password = this.user.Password;
       this.userData.Email = this.user.Email;
       this.userData.Birthday = this.user.Birthday.slice(0, 10);
       this.favorites = this.user.FavoriteMovies;

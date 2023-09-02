@@ -27,11 +27,10 @@ export class MovieCardComponent {
     this.getMovies();
     this.getFavorites();
   }
-
+// Functions for retrieving data from local storage or for triggering API calls
   getUserName(): void {
     this.localUser = localStorage.getItem('user');
     this.localUsername = JSON.parse(this.localUser).Username;
-    // this.favorites = JSON.parse(this.localUser).FavoriteMovies;
   }
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
@@ -68,6 +67,7 @@ export class MovieCardComponent {
       },
     });
   }
+
   getMovieSynopsis(details: string): void {
     this.dialog.open(MovieDetailsComponent, {
       data: {
@@ -76,6 +76,7 @@ export class MovieCardComponent {
       },
     });
   }
+
   toggleMovieFavorite(name: string, id: any): void {
     if (!this.favorites.includes(id)) {
       this.fetchApiData.addFavoriteMovie(name, id).subscribe((resp: any) => {
@@ -91,6 +92,7 @@ export class MovieCardComponent {
       });
     }
   }
+  
   logout(): void {
     localStorage.clear();
     this.router.navigate(['/']);

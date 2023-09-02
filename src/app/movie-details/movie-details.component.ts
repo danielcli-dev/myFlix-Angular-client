@@ -8,6 +8,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class MovieDetailsComponent implements OnInit {
   constructor(
+    // Inject allows for the passing of data when component is opened
     @Inject(MAT_DIALOG_DATA)
     public data: {
       title: string;
