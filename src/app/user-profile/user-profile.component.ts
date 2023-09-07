@@ -9,6 +9,10 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss'],
 })
+
+/**
+ *  THIS IS MY CLASS
+ */
 export class UserProfileComponent implements OnInit {
   user: any = {};
   localUser: any = {};
@@ -38,6 +42,9 @@ export class UserProfileComponent implements OnInit {
     this.getMovies();
   }
 
+  /**
+   * 
+   */
   goBack(): void {
     this.router.navigate(['movies']);
   }
