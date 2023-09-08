@@ -21,7 +21,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">FetchApiDataService</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L15">app/fetch-api-data.service.ts:15</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L19">app/fetch-api-data.service.ts:19</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -59,21 +59,30 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="constructor.new_FetchApiDataService"><span class="tsd-kind-constructor-signature">new <wbr/>Fetch<wbr/>Api<wbr/>Data<wbr/>Service</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">http</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="app_fetch_api_data_service.FetchApiDataService.html" class="tsd-signature-type tsd-kind-class">FetchApiDataService</a><a href="#constructor.new_FetchApiDataService" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>This will provide HttpClient to the entire class, making it available via this.http</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">http</span>: <span class="tsd-signature-type ">HttpClient</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="app_fetch_api_data_service.FetchApiDataService.html" class="tsd-signature-type tsd-kind-class">FetchApiDataService</a></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">http</span>: <span class="tsd-signature-type ">HttpClient</span></h5>
+<div class="tsd-comment tsd-typography"><p>Inject the HttpClient module to the constructor params</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="app_fetch_api_data_service.FetchApiDataService.html" class="tsd-signature-type tsd-kind-class">FetchApiDataService</a></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L18">app/fetch-api-data.service.ts:18</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L25">app/fetch-api-data.service.ts:25</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="http" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>http</span><a href="#http" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">http</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">HttpClient</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">http</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">HttpClient</span></div>
+<div class="tsd-comment tsd-typography"><p>Inject the HttpClient module to the constructor params</p>
+</div>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L18">app/fetch-api-data.service.ts:18</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L25">app/fetch-api-data.service.ts:25</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="addFavoriteMovie" class="tsd-anchor"></a>
@@ -81,184 +90,254 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="addFavoriteMovie.addFavoriteMovie-1"><span class="tsd-kind-call-signature">add<wbr/>Favorite<wbr/>Movie</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#addFavoriteMovie.addFavoriteMovie-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for adding favorite movie to user&#39;s favorite movies</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object of added movie</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L102">app/fetch-api-data.service.ts:102</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L154">app/fetch-api-data.service.ts:154</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="deleteFavoriteMovie" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>delete<wbr/>Favorite<wbr/>Movie</span><a href="#deleteFavoriteMovie" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="deleteFavoriteMovie.deleteFavoriteMovie-1"><span class="tsd-kind-call-signature">delete<wbr/>Favorite<wbr/>Movie</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#deleteFavoriteMovie.deleteFavoriteMovie-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for deleting favorite movie from user&#39;s favorite movies</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object of deleted movie</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L117">app/fetch-api-data.service.ts:117</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L175">app/fetch-api-data.service.ts:175</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="deleteUser" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>delete<wbr/>User</span><a href="#deleteUser" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="deleteUser.deleteUser-1"><span class="tsd-kind-call-signature">delete<wbr/>User</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#deleteUser.deleteUser-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for deleting  user</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>text confirming user deletion</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L139">app/fetch-api-data.service.ts:139</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L208">app/fetch-api-data.service.ts:208</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="editUser" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>edit<wbr/>User</span><a href="#editUser" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="editUser.editUser-1"><span class="tsd-kind-call-signature">edit<wbr/>User</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">userDetails</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#editUser.editUser-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for editing user&#39;s data</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5></li>
+<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">userDetails</span>: <span class="tsd-signature-type">any</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">userDetails</span>: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object with user&#39;s updated data</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L128">app/fetch-api-data.service.ts:128</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L192">app/fetch-api-data.service.ts:192</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="extractResponseData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>extract<wbr/>Response<wbr/>Data</span><a href="#extractResponseData" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
 <li class="tsd-signature tsd-anchor-link" id="extractResponseData.extractResponseData-1"><span class="tsd-kind-call-signature">extract<wbr/>Response<wbr/>Data</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">res</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#extractResponseData.extractResponseData-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Non-typed response extraction</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">res</span>: <span class="tsd-signature-type">any</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">res</span>: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L152">app/fetch-api-data.service.ts:152</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L225">app/fetch-api-data.service.ts:225</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getAllMovies" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>All<wbr/>Movies</span><a href="#getAllMovies" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getAllMovies.getAllMovies-1"><span class="tsd-kind-call-signature">get<wbr/>All<wbr/>Movies</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#getAllMovies.getAllMovies-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>Making the api call for getting movies</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object with all movies data</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L33">app/fetch-api-data.service.ts:33</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L53">app/fetch-api-data.service.ts:53</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getDirector" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Director</span><a href="#getDirector" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getDirector.getDirector-1"><span class="tsd-kind-call-signature">get<wbr/>Director</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#getDirector.getDirector-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for getting a movie&#39;s director data</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object with director&#39;s data</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L54">app/fetch-api-data.service.ts:54</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L85">app/fetch-api-data.service.ts:85</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getFavoriteMovies" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Favorite<wbr/>Movies</span><a href="#getFavoriteMovies" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getFavoriteMovies.getFavoriteMovies-1"><span class="tsd-kind-call-signature">get<wbr/>Favorite<wbr/>Movies</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#getFavoriteMovies.getFavoriteMovies-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for getting user&#39;s favorite movies</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object with user&#39;s favorite movies as id</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L87">app/fetch-api-data.service.ts:87</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L133">app/fetch-api-data.service.ts:133</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getGenre" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Genre</span><a href="#getGenre" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getGenre.getGenre-1"><span class="tsd-kind-call-signature">get<wbr/>Genre</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">genre</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#getGenre.getGenre-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for getting movie&#39;s genre data</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">genre</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">genre</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object with movie&#39;s genre data</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L65">app/fetch-api-data.service.ts:65</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L101">app/fetch-api-data.service.ts:101</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getOneMovie" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>One<wbr/>Movie</span><a href="#getOneMovie" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getOneMovie.getOneMovie-1"><span class="tsd-kind-call-signature">get<wbr/>One<wbr/>Movie</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">title</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#getOneMovie.getOneMovie-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for getting a specific movie data</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">title</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">title</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object with a specific movie&#39;s data</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L43">app/fetch-api-data.service.ts:43</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L69">app/fetch-api-data.service.ts:69</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getUser" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>User</span><a href="#getUser" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getUser.getUser-1"><span class="tsd-kind-call-signature">get<wbr/>User</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#getUser.getUser-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for getting user data</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object with user data</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L76">app/fetch-api-data.service.ts:76</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L117">app/fetch-api-data.service.ts:117</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="handleError" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>handle<wbr/>Error</span><a href="#handleError" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
 <li class="tsd-signature tsd-anchor-link" id="handleError.handleError-1"><span class="tsd-kind-call-signature">handle<wbr/>Error</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#handleError.handleError-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Default error handler</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">error</span>: <span class="tsd-signature-type ">HttpErrorResponse</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">error</span>: <span class="tsd-signature-type ">HttpErrorResponse</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L157">app/fetch-api-data.service.ts:157</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L235">app/fetch-api-data.service.ts:235</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="userLogin" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>user<wbr/>Login</span><a href="#userLogin" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="userLogin.userLogin-1"><span class="tsd-kind-call-signature">user<wbr/>Login</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">userDetails</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#userLogin.userLogin-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for user login</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">userDetails</span>: <span class="tsd-signature-type">any</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">userDetails</span>: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object with user data</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L27">app/fetch-api-data.service.ts:27</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L43">app/fetch-api-data.service.ts:43</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="userRegistration" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>user<wbr/>Registration</span><a href="#userRegistration" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="userRegistration.userRegistration-1"><span class="tsd-kind-call-signature">user<wbr/>Registration</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">userDetails</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><a href="#userRegistration.userRegistration-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Making the api call for user registration</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">userDetails</span>: <span class="tsd-signature-type">any</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">userDetails</span>: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>object with user data</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/52cdf21/src/app/fetch-api-data.service.ts#L21">app/fetch-api-data.service.ts:21</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/danielcli-dev/myFlix-Angular-client/blob/9796cec/src/app/fetch-api-data.service.ts#L32">app/fetch-api-data.service.ts:32</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

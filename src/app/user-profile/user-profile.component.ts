@@ -9,10 +9,6 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss'],
 })
-
-/**
- *  THIS IS MY CLASS
- */
 export class UserProfileComponent implements OnInit {
   user: any = {};
   localUser: any = {};
@@ -22,20 +18,31 @@ export class UserProfileComponent implements OnInit {
   movies: any[] = [];
   favoriteMovies: any[] = [];
 
+  /**
+   * @param fetchApiData service for making API calls
+   * @param snackBar module for creating temporary prompts or messages
+   * @param router module for navigating between different routes
+   * @param dialog module for creating dialog or modals
+   */
   constructor(
     public fetchApiData: FetchApiDataService,
     public snackBar: MatSnackBar,
     private router: Router,
     public dialog: MatDialog
   ) {}
-  // Initializes variables to be assigned when input forms are filled
+
+  /**
+   * Initializes variables to be assigned when input forms are filled
+   */
   @Input() userData = {
     Username: '',
     Password: '',
     Email: '',
     Birthday: '',
   };
-// function triggerred on component creation at beginning of lifecycle
+  /**
+   * On initialization, methods are called to populate initial values
+   */
   ngOnInit(): void {
     this.getUserName();
     this.getUser();
@@ -43,16 +50,23 @@ export class UserProfileComponent implements OnInit {
   }
 
   /**
-   * 
+   * This method uses the router module to navigate to the movies route
    */
   goBack(): void {
     this.router.navigate(['movies']);
   }
+
+  /**
+   * This method retrieves data from local storage
+   */
   getUserName(): void {
     this.localUser = localStorage.getItem('user');
     this.localUsername = JSON.parse(this.localUser).Username;
   }
 
+  /**
+   * This method makes API call to retrieve user data
+   */
   getUser(): void {
     this.fetchApiData.getUser(this.localUsername).subscribe((resp: any) => {
       this.user = resp;
@@ -63,6 +77,9 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * This method edits the user data on the database and sets the user and token in the local storage
+   */
   editUser(): void {
     if (this.userData.Password) {
       this.fetchApiData.editUser(this.localUsername, this.userData).subscribe(
@@ -86,12 +103,12 @@ export class UserProfileComponent implements OnInit {
       });
     }
   }
+
+  /**
+   * This method makes API call to delete user from database
+   */
   deleteUser(): void {
-    if (
-      confirm(
-        `Are you sure you want to delete your account?`
-      )
-    ) {
+    if (confirm(`Are you sure you want to delete your account?`)) {
       this.fetchApiData
         .deleteUser(this.localUsername)
         .subscribe((resp: any) => {
@@ -102,6 +119,10 @@ export class UserProfileComponent implements OnInit {
         });
     }
   }
+
+  /**
+   * This method makes an API call to retrieve an array of all the movies
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -113,6 +134,11 @@ export class UserProfileComponent implements OnInit {
       return this.movies;
     });
   }
+  /**
+   * This method displays the movie genre details using Movie Details Dialog
+   * @param name
+   * @param details
+   */
   getMovieGenre(name: string, details: string): void {
     this.dialog.open(MovieDetailsComponent, {
       data: {
@@ -121,6 +147,12 @@ export class UserProfileComponent implements OnInit {
       },
     });
   }
+
+  /**
+   * This method displays the movie director details using Movie Details Dialog
+   * @param name
+   * @param details
+   */
   getMovieDirector(name: string, details: string): void {
     this.dialog.open(MovieDetailsComponent, {
       data: {
@@ -129,6 +161,11 @@ export class UserProfileComponent implements OnInit {
       },
     });
   }
+
+  /**
+   * This method displays the movie synopsis details using Movie Details Dialog
+   * @param details
+   */
   getMovieSynopsis(details: string): void {
     this.dialog.open(MovieDetailsComponent, {
       data: {
@@ -138,6 +175,11 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * This method either adds or removes the movie from the user's favorite movies
+   * @param name username
+   * @param id movie id
+   */
   toggleMovieFavorite(name: string, id: any): void {
     if (!this.favorites.includes(id)) {
       this.fetchApiData.addFavoriteMovie(name, id).subscribe((resp: any) => {

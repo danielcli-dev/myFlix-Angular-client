@@ -11,6 +11,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class UserRegistrationFormComponent implements OnInit {
   @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };
 
+  /**
+   * Add modules to the UserRegistrationForm
+   * @param fetchApiData service for making API calls
+   * @param dialogRef module for creating dialog or modals
+   * @param snackBar module for creating temporary prompts or messages
+   */
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserRegistrationFormComponent>,
@@ -19,7 +25,10 @@ export class UserRegistrationFormComponent implements OnInit {
 
   // void is the opposite of any type. means it is typeless. use for functions that do not return a value
   ngOnInit(): void {}
-
+  
+  /**
+   * This method makes an API call to create a new user
+   */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe(
       (result) => {

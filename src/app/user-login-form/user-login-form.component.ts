@@ -12,6 +12,12 @@ import { Router } from '@angular/router';
 export class UserLoginFormComponent implements OnInit {
   @Input() userData = { Username: '', Password: '' };
 
+  /**
+   * @param fetchApiData service for making API calls
+   * @param snackBar module for creating temporary prompts or messages
+   * @param router module for navigating between different routes
+   * @param dialog module for creating dialog or modals
+   */
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
@@ -21,6 +27,9 @@ export class UserLoginFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /**
+   * This method makes an API call to login and set user and token in local storage
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
       (result) => {

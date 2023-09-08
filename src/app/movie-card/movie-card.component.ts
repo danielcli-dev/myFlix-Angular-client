@@ -27,7 +27,10 @@ export class MovieCardComponent {
     this.getMovies();
     this.getFavorites();
   }
-  // Functions for retrieving data from local storage or for triggering API calls
+
+  /**
+   * This method retrieves data from local storage
+   */
   getUserName(): void {
     this.localUser = localStorage.getItem('user');
     this.localUsername = JSON.parse(this.localUser).Username;
@@ -64,7 +67,6 @@ export class MovieCardComponent {
   }
   /**
    * This method displays the movie genre details using Movie Details Dialog
-
    * @param name
    * @param details
    */
